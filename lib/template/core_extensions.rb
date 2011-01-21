@@ -24,6 +24,7 @@ module Rails
           else
             :none
         end
+
       end
 
       def recipe(name)
