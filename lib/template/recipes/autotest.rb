@@ -1,4 +1,4 @@
-gem 'autotest','4.4.5',:group=>:test
+gem 'autotest','4.4.6',:group=>:test
 gem 'autotest-rails',:group=>:test
 gem 'autotest-growl',:group=>:test
 gem 'autotest-fsevent',:group=>:test
