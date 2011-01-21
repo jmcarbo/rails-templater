@@ -25,6 +25,8 @@ module Rails
             :none
         end
 
+        @template_options[:devise] = yes? "Install devise authentication? [y|n]", Thor::Shell::Color::BLUE
+
       end
 
       def recipe(name)

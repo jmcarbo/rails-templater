@@ -2,6 +2,7 @@ require File.join(File.dirname(__FILE__), 'core_extensions.rb')
 
 initialize_templater
 
+required_recipes << ["devise"] if template_options[:devise]
 required_recipes = %w(autotest default mongoid jquery haml rspec factory_girl remarkable)
 required_recipes.each {|required_recipe| apply recipe(required_recipe)}
 
