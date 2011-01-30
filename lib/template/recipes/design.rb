@@ -12,5 +12,5 @@ if template_options[:design] == :compass
     run compass_command
     puts "Compass has been setup"
   end
-  
+
 end

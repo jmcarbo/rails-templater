@@ -16,9 +16,11 @@ post_bundler_strategies <<  lambda do
 
   inject_into_file "features/support/env.rb", load_snippet('factory_girl', 'cucumber'), :after => 'ActionController::Base.allow_rescue = false'
 
-  # Mongoid truncation strategy
-  create_file 'features/support/hooks.rb', load_template('features/support/hooks.rb', 'mongoid')
+  if @template_options[:mongoid]
+    # Mongoid truncation strategy
+    create_file 'features/support/hooks.rb', load_template('features/support/hooks.rb', 'mongoid')
 
-  # Compliment to factory_girl step definitions
-  create_file 'features/step_definitions/mongoid_steps.rb', load_template('features/step_definitions/mongoid_steps.rb', 'mongoid')
+    # Compliment to factory_girl step definitions
+    create_file 'features/step_definitions/mongoid_steps.rb', load_template('features/step_definitions/mongoid_steps.rb', 'mongoid')
+  end
 end

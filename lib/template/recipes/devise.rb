@@ -1,4 +1,4 @@
-if template_options[:devise]==true
+if template_options[:devise]
   gem 'devise'
 
   post_bundler_strategies << lambda do
